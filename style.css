@@ -40,6 +40,14 @@ nav a {
   background: var(--card); border: 1px solid var(--line); color: var(--text); font-size: 15px;
 }
 nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* 語言切換列：nav 下方的小字，不換行 */
+nav.lang { gap: 0; flex-wrap: nowrap; align-items: center; white-space: nowrap; margin: -12px 0 24px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+nav.lang a { padding: 2px 0; border: 0; border-radius: 0; background: none; color: var(--muted); font-size: 13px; text-decoration: none; }
+nav.lang a:hover { text-decoration: underline; }
+nav.lang a[aria-current="true"] { color: var(--text); font-weight: 600; }
+nav.lang .sep { margin: 0 8px; opacity: .5; }
+/* 日文頁用日文字型，避免漢字套用中文字形 */
+html:lang(ja) body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif; }
 section { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; margin-bottom: 16px; }
 h2 { font-size: 19px; margin: 0 0 8px; }
 h3 { font-size: 16px; margin: 18px 0 4px; }
